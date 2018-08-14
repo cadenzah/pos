@@ -1,0 +1,12 @@
+[
+	{
+		"id": "set-cheese",
+		"name": "치즈버거 세트",
+		"price": "5500"
+	},
+	{
+		"id": "cheese",
+		"name": "치즈버거",
+		"price": "3500"
+	}
+]
