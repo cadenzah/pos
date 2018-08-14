@@ -9495,7 +9495,7 @@ module.exports = __webpack_require__(19);
 
 const React = __webpack_require__(81);
 const ReactDOM = __webpack_require__(80);
-const Content = requrie("./content.jsx");
+const Content = __webpack_require__(186);
 
 ReactDOM.render(React.createElement(Content, null), document.getElementById("content"));
 
@@ -22673,6 +22673,107 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const React = __webpack_require__(81);
+const data_url = "./catalog.json";
+const Menu = __webpack_require__(187);
+
+class Content extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			current_order: [],
+			catalog: []
+		};
+		this.handleAddItem = this.handleAddItem.bind(this);
+	}
+
+	componentDidMount() {
+		fetch(data_url).then(response => response.json()).then(catalog => this.setState({ catalog: catalog }));
+	}
+
+	handleAddItem(event) {
+		this.setState();
+	}
+
+	handleRemoveItem(event) {}
+
+	render() {
+		return React.createElement(
+			"div",
+			null,
+			React.createElement(Menu, { catalog: this.state.catalog, handler: this.handleAddItem })
+		);
+	}
+}
+// <Order current_order={this.state.current_order} />
+module.exports = Content;
+
+/***/ }),
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const React = __webpack_require__(81);
+const Item = __webpack_require__(189);
+
+class Menu extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	// Button을 하위에 만들어서 map
+
+	render() {
+		return React.createElement(
+			"div",
+			null,
+			React.createElement(
+				"h1",
+				null,
+				"Menu"
+			),
+			React.createElement(
+				"ul",
+				null,
+				this.props.catalog.map((item, index) => {
+					return React.createElement(
+						"li",
+						{ key: index },
+						React.createElement(Item, { info: item, handler: this.props.handler })
+					);
+				})
+			)
+		);
+	}
+}
+
+module.exports = Menu;
+
+/***/ }),
+/* 188 */,
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const React = __webpack_require__(81);
+
+class Item extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return React.createElement(
+			"div",
+			{ onClick: this.props.handler },
+			this.props.info.name
+		);
+	}
+}
+
+module.exports = Item;
 
 /***/ })
 /******/ ]);

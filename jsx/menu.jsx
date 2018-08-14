@@ -1,4 +1,5 @@
 const React = require("react")
+const Item = require("./item.jsx")
 
 class Menu extends React.Component {
 	constructor(props) {
@@ -11,8 +12,9 @@ class Menu extends React.Component {
 			<div>
 				<h1>Menu</h1>
 				<ul>
-				{this.props.catalog.map((item) =>
-					<li><Item info={item} handler={this.props.handler}/></li>
+				{this.props.catalog.map((item, index) => {
+					return <li key={index}><Item info={item} handler={this.props.handler}/></li>
+				}
 				)}
 				</ul>
 			</div>
@@ -20,4 +22,4 @@ class Menu extends React.Component {
 	}
 }
 
-module.exports = Content
+module.exports = Menu

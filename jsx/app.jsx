@@ -2,7 +2,7 @@
 
 const React = require("react")
 const ReactDOM = require("react-dom")
-const Content = requrie("./content.jsx")
+const Content = require("./content.jsx")
 
 ReactDOM.render(
 	<Content />,
