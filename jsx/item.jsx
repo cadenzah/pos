@@ -7,11 +7,12 @@ class Item extends React.Component {
 
 	render() {
 		return (
-			<div onClick={this.props.handler}>
+			<div onClick={this.props.handler.bind(null, this.props.info.id)}>
 				{this.props.info.name}
 			</div>
 		)
 	}
 }
 
+// bind with "null" this argument just add new additional argument and use original this.
 module.exports = Item

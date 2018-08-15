@@ -1,6 +1,6 @@
 [
 	{
-		"id": "set-cheese",
+		"id": "set_cheese",
 		"name": "치즈버거 세트",
 		"price": "5500"
 	},
@@ -10,7 +10,7 @@
 		"price": "3500"
 	},
 	{
-		"id": "set-bulgogi",
+		"id": "set_bulgogi",
 		"name": "불고기버거 세트",
 		"price": "5500"
 	},

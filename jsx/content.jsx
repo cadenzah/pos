@@ -18,15 +18,40 @@ class Content extends React.Component {
 		.then((catalog)=> this.setState({catalog: catalog}))
 	}
 
-	handleAddItem(event) {
-		this.setState(
-			// if (this.state.current_order[event.target.])
-			// 누르면 해당 아이템을 current_order의 요소로 추가함
-			// -> 이미 존재하는지 검사 후, 존재하면 개수만 갱신하도록. // find와 함께 쓰면 될듯
-			// 여러번 클릭에 따라 개수 카운트하여 자동 반영되도록
-			// 초기 개수는 0개. 0개 미만으로 내려가면 안됨
-			// current_order는 배열이므로, 맨 마지막에 추가.
-		)
+	handleAddItem(id, event) {
+		let order_index = -1
+		this.state.current_order.map((entry, index, current_order) => {
+				// 한번 일치를 찾고나면, 그 다음에 다르더라도 인덱스++를 하면 안됨
+			if (entry.id == id) order_index = index
+			if (order_index == -1) order_index = current_order.length
+			console.log("order_index가 " + order_index +"로 변경")
+		})
+
+		let obj = Object.assign(this.state.current_order)
+		this.setState((prevState, props) => {
+			if (order_index == -1) {
+				console.log("첫번째 if")
+				obj[0] = {
+					id: id,
+					quantity: 1
+				}
+			}
+			else if (obj[order_index] == undefined) {
+				console.log("두번째 if / order_index = " + order_index)
+				obj[order_index] = {
+					id: id,
+					quantity: 1
+				}
+			}
+			else {
+				console.log("세번째 if / order_index = " + order_index)
+				obj[order_index] = {
+					id: id,
+					quantity: ++obj[order_index].quantity
+				}
+			}
+			return {current_order: obj}
+		})
 	}
 
 	handleRemoveItem(event) {
@@ -42,4 +67,18 @@ class Content extends React.Component {
 	}
 }
 // <Order current_order={this.state.current_order} />
+
 module.exports = Content
+
+// 		this.setState({
+// 			if (order_index === 0 ) {
+// 				let obj = Object.assign(this.state.current_order)
+// 				obj.indexOf(order_index) = {
+// 					id: id,
+// 					quantity: 1
+// 				}
+// 				current_order: obj
+// 			} else {
+// 				current_order.indexOf(order.index): quantity + 1
+// 			}
+// 		})
