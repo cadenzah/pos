@@ -2,20 +2,14 @@ const React = require("react")
 const Sum = require("./sum.jsx")
 const OrderList = require("./orderlist.jsx")
 
-class Order extends React.Component {
-	constructor(props) {
-		super(props)
-	}
-
-	render() {
+const Order = (props) => {
 		return (
 			<div>
 				<h1>Order</h1>
-				<Sum sum={this.props.sum} />
-				<OrderList order={this.props.order} catalog={this.props.catalog} handler={this.props.handleRemoveItem}/>
+				<Sum sum={props.sum} />
+				<OrderList order={props.order} catalog={props.catalog} handler={props.handler}/>
 			</div>
 		)
-	}
 }
 
 module.exports = Order

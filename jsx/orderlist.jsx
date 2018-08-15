@@ -8,7 +8,7 @@ const OrderList = (props) => {
 			{props.order.map((item, index) => {
 				return (
 					<li key={index}>
-						{props.catalog.find((entry) => entry.id == item.id).name} / {props.catalog.find((entry) => entry.id == item.id).price}원 / {item.quantity}개 / <span onClick={props.handler}>제거</span>
+						{props.catalog.find((entry) => entry.id == item.id).name} / {props.catalog.find((entry) => entry.id == item.id).price}원 / {item.quantity}개 / <span onClick={props.handler.bind(null,item.id)}>제거</span>
 					</li>
 				)
 			}
