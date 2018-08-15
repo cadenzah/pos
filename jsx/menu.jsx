@@ -9,7 +9,7 @@ class Menu extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="menu">
 				<h1>Menu</h1>
 				<ul>
 				{this.props.catalog.map((item, index) => {

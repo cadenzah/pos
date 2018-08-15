@@ -2,7 +2,7 @@ const React = require("react")
 
 const OrderList = (props) => {
 	return (
-		<div>
+		<div className="orderlist">
 			<h1>List of Orders</h1>
 			<ul>
 			{props.order.map((item, index) => {

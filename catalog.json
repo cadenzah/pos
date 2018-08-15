@@ -18,5 +18,10 @@
 		"id": "bulgogi",
 		"name": "불고기버거",
 		"price": "3500"
+	},
+	{
+		"id": "set_shrimp",
+		"name": "새우버거 세트",
+		"price": "5500"
 	}
 ]

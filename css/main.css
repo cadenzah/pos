@@ -1,0 +1,38 @@
+body {
+	
+}
+
+.app-container {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: left;
+	border: 2px solid black;
+	min-height: 400px;
+}
+
+.menu .order {
+	margin: 5px;
+}
+
+.order {
+	float: left;
+	background-color: brown;
+	width: 400px;
+	height: 100%;
+}
+
+.orderlist {
+	overflow-y: scroll;
+	height: 150px;
+}
+
+.menu {
+	float: left;
+	background-color: green;
+	width: 600px;
+
+}
+
+.title {
+	font-size: 50px;
+}
