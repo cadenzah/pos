@@ -1,13 +1,15 @@
 const React = require("react")
 const data_url = "./catalog.json"
 const Menu = require ("./menu.jsx")
+const Order = require("./order.jsx")
 
 class Content extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			current_order: [],
-			catalog: []
+			catalog: [],
+			current_sum: 0
 		}
 		this.handleAddItem = this.handleAddItem.bind(this)
 	}
@@ -15,11 +17,12 @@ class Content extends React.Component {
 	componentDidMount() {
 		fetch(data_url)
 		.then((response) => response.json())
-		.then((catalog)=> this.setState({catalog: catalog}))
+		.then((catalog) => this.setState({catalog: catalog}))
 	}
 
 	handleAddItem(id, event) {
 		let order_index = -1
+		let sum = this.state.current_sum
 		this.state.current_order.map((entry, index, current_order) => {
 				// 한번 일치를 찾고나면, 그 다음에 다르더라도 인덱스++를 하면 안됨
 			if (entry.id == id) order_index = index
@@ -50,7 +53,11 @@ class Content extends React.Component {
 					quantity: ++obj[order_index].quantity
 				}
 			}
-			return {current_order: obj}
+			sum = sum + parseInt(this.state.catalog.find((entry) => entry.id == id).price)
+			return {
+				current_order: obj,
+				current_sum: sum
+			}
 		})
 	}
 
@@ -62,23 +69,12 @@ class Content extends React.Component {
 		return (
 			<div>
 				<Menu catalog={this.state.catalog} handler={this.handleAddItem} />
+				<Order sum={this.state.current_sum} order={this.state.current_order} />
 			</div>
 		)
 	}
 }
-// <Order current_order={this.state.current_order} />
+
 
 module.exports = Content
 
-// 		this.setState({
-// 			if (order_index === 0 ) {
-// 				let obj = Object.assign(this.state.current_order)
-// 				obj.indexOf(order_index) = {
-// 					id: id,
-// 					quantity: 1
-// 				}
-// 				current_order: obj
-// 			} else {
-// 				current_order.indexOf(order.index): quantity + 1
-// 			}
-// 		})
