@@ -69,7 +69,7 @@ class Content extends React.Component {
 		return (
 			<div>
 				<Menu catalog={this.state.catalog} handler={this.handleAddItem} />
-				<Order sum={this.state.current_sum} order={this.state.current_order} />
+				<Order sum={this.state.current_sum} catalog={this.state.catalog} order={this.state.current_order} />
 			</div>
 		)
 	}
