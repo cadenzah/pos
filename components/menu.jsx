@@ -11,7 +11,7 @@ class Menu extends React.Component {
 		return (
 			<div className="menu">
 				{this.props.catalog.map((item, index) => {
-					return <Item info={item} handler={this.props.handler} />
+					return <Item key = {index} info={item} handler={this.props.handler} />
 				})}
 			</div>
 		)

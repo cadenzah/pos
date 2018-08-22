@@ -9491,7 +9491,7 @@ module.exports = __webpack_require__(19);
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(193);
+__webpack_require__(197);
 
 const React = __webpack_require__(81);
 const ReactDOM = __webpack_require__(80);
@@ -22769,7 +22769,7 @@ module.exports = OrderList;
 /***/ (function(module, exports, __webpack_require__) {
 
 const React = __webpack_require__(81);
-const data_url = "./catalog.json";
+const data_url = "catalog.json";
 const Menu = __webpack_require__(190);
 const Order = __webpack_require__(191);
 
@@ -22940,7 +22940,7 @@ class Menu extends React.Component {
 			"div",
 			{ className: "menu" },
 			this.props.catalog.map((item, index) => {
-				return React.createElement(Item, { info: item, handler: this.props.handler });
+				return React.createElement(Item, { key: index, info: item, handler: this.props.handler });
 			})
 		);
 	}
@@ -22991,46 +22991,8 @@ const Sum = props => {
 module.exports = Sum;
 
 /***/ }),
-/* 193 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(194);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(196)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!./main.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!./main.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 194 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(195)();
-// imports
-
-
-// module
-exports.push([module.i, "body {\n\t\n}\n\n.app-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n\ttext-align: left;\n\tborder: 2px solid black;\n\tmin-height: 400px;\n}\n\n.menu .order {\n\tmargin: 5px;\n}\n\n.order {\n\tfloat: left;\n\tbackground-color: brown;\n\twidth: 400px;\n\theight: 100%;\n}\n\n.makeorder {\n\tfloat: left;\n\tpadding: 35px 10px;\n\twidth: 60px;\n\theight: 60px;\n\tfont-size: 1.5em;\n\ttext-align: center;\n\tbackground-color: purple;\n\n}\n\n.sum {\n\theight: 130px;\n}\n\n.sum h1 {\n\tmargin: 0;\n\ttext-align: right;\n\tpadding: 32px 10px 31px;\n\tfont-size: 3.5em;\n}\n\n.orderlist {\n\toverflow-y: scroll;\n\theight: 270px;\n\tbackground-color: blue;\n}\n\ntable {\n\tborder-collapse: collapse;\n\twidth: 100%;\n\n}\n\ntable, th, td {\n\tborder: 1px solid grey;\n}\n\nth {\n\ttext-align: center;\n\theight: 25px;\n}\n\nth.order_number {\n\twidth: 35px;\n}\n\nth.order_price {\n\twidth: 90px;\n}\n\nth.order_quantity {\n\twidth: 50px;\n}\n\nth.order_delete {\n\twidth: 35px;\n}\n\n.orderlist_table td {\n\tfont-size: 1.1em;\n}\n\ntd {\n\theight: 45px;\n}\n\ntd.order_number, td.order_price, td.order_quantity, td.order_delete {\n\ttext-align: center;\n}\n\ntd.order_item {\n\tpadding-left: 5px;\n}\n\n.orderlist_table {\n\n}\n\n.menu {\n\tfloat: left;\n\tbackground-color: green;\n\twidth: 600px;\n\theight: 400px;\n\toverflow-y: scroll;\n}\n\n.item {\n\twidth: 138px;\n\theight: 138px;\n\tdisplay: inline-block;\n\tbackground-color: orange;\n\tborder: 1px solid black;\n\tfont-size: 1.8em;\n\tmargin: 5px;\n\tfloat: left;\n}\n\n.item td {\n\twidth: 138px;\n\theight: 138px;\n\ttext-align: center;\n\tvertical-align: middle;\n\tborder: 0px;\n}\n\n.title {\n\tfont-size: 50px;\n}", ""]);
-
-// exports
-
-
-/***/ }),
+/* 193 */,
+/* 194 */,
 /* 195 */
 /***/ (function(module, exports) {
 
@@ -23336,6 +23298,46 @@ function updateLink(linkElement, obj) {
 	if(oldSrc)
 		URL.revokeObjectURL(oldSrc);
 }
+
+
+/***/ }),
+/* 197 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(198);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(196)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./main.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./main.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 198 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(195)();
+// imports
+
+
+// module
+exports.push([module.i, "body {\n\t\n}\n\n.app-container {\n\twidth: 1000px;\n\tmargin: 0 auto;\n\ttext-align: left;\n\tborder: 2px solid black;\n\tmin-height: 400px;\n}\n\n.menu .order {\n\tmargin: 5px;\n}\n\n.order {\n\tfloat: left;\n\tbackground-color: brown;\n\twidth: 400px;\n\theight: 100%;\n}\n\n.makeorder {\n\tfloat: left;\n\tpadding: 35px 10px;\n\twidth: 60px;\n\theight: 60px;\n\tfont-size: 1.5em;\n\ttext-align: center;\n\tbackground-color: purple;\n\n}\n\n.sum {\n\theight: 130px;\n}\n\n.sum h1 {\n\tmargin: 0;\n\ttext-align: right;\n\tpadding: 32px 10px 31px;\n\tfont-size: 3.5em;\n}\n\n.orderlist {\n\toverflow-y: scroll;\n\theight: 270px;\n\tbackground-color: blue;\n}\n\ntable {\n\tborder-collapse: collapse;\n\twidth: 100%;\n\n}\n\ntable, th, td {\n\tborder: 1px solid grey;\n}\n\nth {\n\ttext-align: center;\n\theight: 25px;\n}\n\nth.order_number {\n\twidth: 35px;\n}\n\nth.order_price {\n\twidth: 90px;\n}\n\nth.order_quantity {\n\twidth: 50px;\n}\n\nth.order_delete {\n\twidth: 35px;\n}\n\n.orderlist_table td {\n\tfont-size: 1.1em;\n}\n\ntd {\n\theight: 45px;\n}\n\ntd.order_number, td.order_price, td.order_quantity, td.order_delete {\n\ttext-align: center;\n}\n\ntd.order_item {\n\tpadding-left: 5px;\n}\n\n.orderlist_table {\n\n}\n\n.menu {\n\tfloat: left;\n\tbackground-color: green;\n\twidth: 600px;\n\theight: 400px;\n\toverflow-y: scroll;\n}\n\n.item {\n\twidth: 138px;\n\theight: 138px;\n\tdisplay: inline-block;\n\tbackground-color: orange;\n\tborder: 1px solid black;\n\tfont-size: 1.8em;\n\tmargin: 5px;\n\tfloat: left;\n}\n\n.item td {\n\twidth: 138px;\n\theight: 138px;\n\ttext-align: center;\n\tvertical-align: middle;\n\tborder: 0px;\n}\n\n.title {\n\tfont-size: 50px;\n}", ""]);
+
+// exports
 
 
 /***/ })

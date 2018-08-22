@@ -1,5 +1,5 @@
 const React = require("react")
-const data_url = "./catalog.json"
+const data_url = "catalog.json"
 const Menu = require ("./menu.jsx")
 const Order = require("./order.jsx")
 

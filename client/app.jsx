@@ -1,4 +1,4 @@
-require("../css/main.css")
+require("../public/css/main.css")
 
 const React = require("react")
 const ReactDOM = require("react-dom")
