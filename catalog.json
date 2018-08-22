@@ -1,7 +1,42 @@
 [
 	{
-		"id": "set_cheese",
-		"name": "치즈버거 세트",
+		"id": "bigking",
+		"name": "빅킹",
+		"price": "4400"
+	},
+	{
+		"id": "set_bigking",
+		"name": "빅킹 세트",
+		"price": "5500"
+	},
+	{
+		"id": "0318",
+		"name": "0318버거",
+		"price": "5400"
+	},
+	{
+		"id": "set_0318",
+		"name": "0318버거 세트",
+		"price": "6700"
+	},
+	{
+		"id": "kingspicy",
+		"name": "킹스파이시 킹하이버거",
+		"price": "4400"
+	},
+	{
+		"id": "set_kingspicy",
+		"name": "킹스파이시 킹하이버거 세트",
+		"price": "5500"
+	},
+	{
+		"id": "shook",
+		"name": "슈슉버거",
+		"price": "4400"
+	},
+	{
+		"id": "set_shook",
+		"name": "슈슉버거 세트",
 		"price": "5500"
 	},
 	{
@@ -10,18 +45,18 @@
 		"price": "3500"
 	},
 	{
-		"id": "set_bulgogi",
-		"name": "불고기버거 세트",
-		"price": "5500"
+		"id": "plain_flurry",
+		"name": "오레오 킹플러리",
+		"price": "2200"
 	},
 	{
-		"id": "bulgogi",
-		"name": "불고기버거",
-		"price": "3500"
+		"id": "berry_flurry",
+		"name": "딸기 오레오 킹플러리",
+		"price": "2200"
 	},
 	{
-		"id": "set_shrimp",
-		"name": "새우버거 세트",
-		"price": "5500"
+		"id": "choco-flurry",
+		"name": "초코 오레오 킹플러리",
+		"price": "2200"
 	}
 ]

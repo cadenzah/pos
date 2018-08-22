@@ -10,13 +10,9 @@ class Menu extends React.Component {
 	render() {
 		return (
 			<div className="menu">
-				<h1>Menu</h1>
-				<ul>
 				{this.props.catalog.map((item, index) => {
-					return <li key={index}><Item info={item} handler={this.props.handler}/></li>
-				}
-				)}
-				</ul>
+					return <Item info={item} handler={this.props.handler} />
+				})}
 			</div>
 		)
 	}

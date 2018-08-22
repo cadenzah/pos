@@ -21,16 +21,110 @@ body {
 	height: 100%;
 }
 
+.makeorder {
+	float: left;
+	padding: 35px 10px;
+	width: 60px;
+	height: 60px;
+	font-size: 1.5em;
+	text-align: center;
+	background-color: purple;
+
+}
+
+.sum {
+	height: 130px;
+}
+
+.sum h1 {
+	margin: 0;
+	text-align: right;
+	padding: 32px 10px 31px;
+	font-size: 3.5em;
+}
+
 .orderlist {
 	overflow-y: scroll;
-	height: 150px;
+	height: 270px;
+	background-color: blue;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+
+}
+
+table, th, td {
+	border: 1px solid grey;
+}
+
+th {
+	text-align: center;
+	height: 25px;
+}
+
+th.order_number {
+	width: 35px;
+}
+
+th.order_price {
+	width: 90px;
+}
+
+th.order_quantity {
+	width: 50px;
+}
+
+th.order_delete {
+	width: 35px;
+}
+
+.orderlist_table td {
+	font-size: 1.1em;
+}
+
+td {
+	height: 45px;
+}
+
+td.order_number, td.order_price, td.order_quantity, td.order_delete {
+	text-align: center;
+}
+
+td.order_item {
+	padding-left: 5px;
+}
+
+.orderlist_table {
+
 }
 
 .menu {
 	float: left;
 	background-color: green;
 	width: 600px;
+	height: 400px;
+	overflow-y: scroll;
+}
 
+.item {
+	width: 138px;
+	height: 138px;
+	display: inline-block;
+	background-color: orange;
+	border: 1px solid black;
+	font-size: 1.8em;
+	margin: 5px;
+	float: left;
+}
+
+.item td {
+	width: 138px;
+	height: 138px;
+	text-align: center;
+	vertical-align: middle;
+	border: 0px;
 }
 
 .title {

@@ -13,6 +13,7 @@ class Content extends React.Component {
 		}
 		this.handleAddItem = this.handleAddItem.bind(this)
 		this.handleRemoveItem = this.handleRemoveItem.bind(this)
+		this.handleFinishOrder = this.handleFinishOrder.bind(this)
 	}
 
 	componentDidMount() {
@@ -89,10 +90,19 @@ class Content extends React.Component {
 		})		
 	}
 
+	handleFinishOrder(event) {
+		console.log(event)
+	}
+
 	render() {
 		return (
 			<div className="app-container">
-				<Order sum={this.state.current_sum} catalog={this.state.catalog} order={this.state.current_order} handler={this.handleRemoveItem} />
+				<Order
+				  sum={this.state.current_sum}
+				  catalog={this.state.catalog}
+				  order={this.state.current_order}
+				  removeHandler={this.handleRemoveItem}
+				  finishHandler={this.handleFinishOrder} />
 				<Menu catalog={this.state.catalog} handler={this.handleAddItem} />
 			</div>
 		)

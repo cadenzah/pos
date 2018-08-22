@@ -7,9 +7,11 @@ class Item extends React.Component {
 
 	render() {
 		return (
-			<div onClick={this.props.handler.bind(null, this.props.info.id)}>
+			<table className="item" onClick={this.props.handler.bind(null, this.props.info.id)}>
+				<td>
 				{this.props.info.name}
-			</div>
+				</td>
+			</table>
 		)
 	}
 }
