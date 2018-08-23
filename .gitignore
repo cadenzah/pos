@@ -1,5 +1,5 @@
 ## pos git ignore files ##
 
 node_modules/
-js/bundle.js
-js/bundle.js.map
+public/js/bundle.js
+public/js/bundle.js.map

@@ -12,7 +12,6 @@ const express = require('express'),
   ReactDOMServer = require('react-dom/server'),
   React = require('react')
 
-
 const Content = React.createFactory(require('./components/content.jsx'))
 
 app.set('view engine', 'hbs')
@@ -25,6 +24,11 @@ app.use(bodyParser.json())
 app.use(validator())
 app.use(express.static('public'))
 
+app.post("/upload", (req, res, next) => {
+  const data = req.body.payload // array of objects
+  console.dir(data)
+})
+
 app.get('/', (req, res, next) => {
   res.render('index', {
     content: ReactDOMServer.renderToString(Content()),
@@ -33,3 +37,19 @@ app.get('/', (req, res, next) => {
 })
 
 app.listen(3000)
+
+// 주문완료를 누르면
+// this.state.current_order 배열을 json으로 파싱
+// post 방식으로 전송
+
+// server에서는 받아다가 순회하며
+// public/order_report.json을 열어서
+// 데이터를 읽어온 뒤
+// [0] [...원래 있던 데이터] 식으로 새로 배열 만든 뒤
+// 덮어쓰기
+
+// 주문 건들을 모두 모아놓은 order_report.json에 저장하되
+// 맨 앞에 추가하여 attach
+
+// 완료 후 이에 대하여 alert로 주문 내역 출력
+// 그리고 this.state.current_order는 초기화

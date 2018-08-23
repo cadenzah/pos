@@ -1,5 +1,6 @@
 const React = require("react")
 const data_url = "catalog.json"
+const order_upload_url = "/upload"
 const Menu = require ("./menu.jsx")
 const Order = require("./order.jsx")
 
@@ -91,7 +92,19 @@ class Content extends React.Component {
 	}
 
 	handleFinishOrder(event) {
+		const data = {
+			payload: Object.assign(this.state.current_order)
+		}
 		console.log(event)
+		fetch(order_upload_url, {
+			method: "POST",
+			body: JSON.stringify(data),
+			headers: {
+				"Content-type": "application/json",
+				"Accept": "application/json"
+			}
+		})
+		  .then()
 	}
 
 	render() {
@@ -110,4 +123,3 @@ class Content extends React.Component {
 }
 
 module.exports = Content
-
