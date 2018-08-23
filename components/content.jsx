@@ -93,9 +93,11 @@ class Content extends React.Component {
 
 	handleFinishOrder(event) {
 		const data = {
-			payload: Object.assign(this.state.current_order)
+			payload: {
+				orderlist: Object.assign(this.state.current_order),
+				sum: this.state.current_sum
+			}
 		}
-		console.log(event)
 		fetch(order_upload_url, {
 			method: "POST",
 			body: JSON.stringify(data),
@@ -104,7 +106,25 @@ class Content extends React.Component {
 				"Accept": "application/json"
 			}
 		})
-		  .then()
+		  .then( (response) => {
+		  	if (response.status === 200 || response.status === 201) {
+		  		response.json().then( (final_order) => {
+		  			let str = ""
+		  			final_order.orderlist.map( (entry) => {
+		  				str = `${str}
+- ${this.state.catalog.find((menu) => menu.id == entry.id).name} ${entry.quantity}개`
+		  			})
+		  			str = `# 주문 결과 #
+${str}
+> 결제 금액: ${final_order.sum}원`
+		  			alert(str)
+		  		})
+		  	}
+		  }).catch( error => console.error(error))
+		  this.setState({
+		  	current_order: [],
+		  	current_sum: 0
+		  })
 	}
 
 	render() {

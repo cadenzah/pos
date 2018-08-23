@@ -27,6 +27,12 @@ app.use(express.static('public'))
 app.post("/upload", (req, res, next) => {
   const data = req.body.payload // array of objects
   console.dir(data)
+  const new_entry = {
+    date: Date(),
+    orderlist: req.body.payload.orderlist,
+    sum: req.body.payload.sum
+  }
+  res.end(JSON.stringify(new_entry))
 })
 
 app.get('/', (req, res, next) => {
@@ -53,3 +59,6 @@ app.listen(3000)
 
 // 완료 후 이에 대하여 alert로 주문 내역 출력
 // 그리고 this.state.current_order는 초기화
+
+// 서버 요청에 대해서는 반드시, 반환이 있어야 한다. res를 통하여.
+// 요청할 때에 헤더를 반드시 잘 작성해야 한다. 아니면 서버 쪽에서 데이터를 아예 못받아냄
