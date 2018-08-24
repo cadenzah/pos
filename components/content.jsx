@@ -109,12 +109,14 @@ class Content extends React.Component {
 		  .then( (response) => {
 		  	if (response.status === 200 || response.status === 201) {
 		  		response.json().then( (final_order) => {
+		  			const date = new Date(final_order.date)
 		  			let str = ""
 		  			final_order.orderlist.map( (entry) => {
 		  				str = `${str}
 - ${this.state.catalog.find((menu) => menu.id == entry.id).name} ${entry.quantity}개`
 		  			})
 		  			str = `# 주문 결과 #
+> 주문 일시: ${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일 ${date.getHours()}시 ${date.getMinutes()}분 ${date.getSeconds()}초
 ${str}
 > 결제 금액: ${final_order.sum}원`
 		  			alert(str)

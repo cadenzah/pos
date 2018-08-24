@@ -28,7 +28,7 @@ app.post("/upload", (req, res, next) => {
   const data = req.body.payload // array of objects
   console.dir(data)
   const new_entry = {
-    date: Date(),
+    date: new Date(),
     orderlist: req.body.payload.orderlist,
     sum: req.body.payload.sum
   }
@@ -62,3 +62,8 @@ app.listen(3000)
 
 // 서버 요청에 대해서는 반드시, 반환이 있어야 한다. res를 통하여.
 // 요청할 때에 헤더를 반드시 잘 작성해야 한다. 아니면 서버 쪽에서 데이터를 아예 못받아냄
+// stringify하는 객체는 반드시 키가 1개인 객체를 또다시 객체로 감싼 형태여야 한다
+
+// Date() 와 new Date() 와 (new Date()).toJSON() 은 모두 결과가 다르다.
+// 객체에 Date를 넣게 되면 자동으로 일반 string으로 해석되어 json으로 저장되며,
+// 이를 다시 Time 객체로 사용하려면, Time 생성자에 넣어 새 Time 객체로 만들어야 함
