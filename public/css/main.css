@@ -3,8 +3,8 @@ body {
 }
 
 .app-container {
-	width: 1000px;
-	margin: 0 auto;
+	width: 1010px;
+	margin: 100px auto 0;
 	text-align: left;
 	border: 2px solid black;
 	min-height: 400px;
@@ -16,19 +16,22 @@ body {
 
 .order {
 	float: left;
-	background-color: brown;
-	width: 400px;
+	/*background-color: brown;*/
+	width: 390px;
 	height: 100%;
+	margin: 0 0 0 10px;
 }
 
 .makeorder {
 	float: left;
 	padding: 35px 10px;
-	width: 60px;
-	height: 60px;
+	width: 58px;
+	height: 58px;
 	font-size: 1.5em;
 	text-align: center;
-	background-color: purple;
+	background-color: #cccccc;
+	border: 1px solid black;
+	margin: 5px 0 0 0;
 
 }
 
@@ -37,7 +40,7 @@ body {
 }
 
 .sum h1 {
-	margin: 0;
+	margin: 5px 0 0 0;
 	text-align: right;
 	padding: 32px 10px 31px;
 	font-size: 3.5em;
@@ -45,8 +48,9 @@ body {
 
 .orderlist {
 	overflow-y: scroll;
-	height: 270px;
-	background-color: blue;
+	height: 250px;
+	margin: 5px 0 0 0;
+	/*background-color: blue;*/
 }
 
 table {
@@ -102,9 +106,10 @@ td.order_item {
 
 .menu {
 	float: left;
-	background-color: green;
+	/*background-color: green;*/
 	width: 600px;
 	height: 400px;
+	margin: 0 0 0 10px;
 	overflow-y: scroll;
 }
 
@@ -112,7 +117,7 @@ td.order_item {
 	width: 138px;
 	height: 138px;
 	display: inline-block;
-	background-color: orange;
+	background-color: #cccccc;
 	border: 1px solid black;
 	font-size: 1.8em;
 	margin: 5px;

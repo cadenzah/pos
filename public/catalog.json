@@ -41,8 +41,73 @@
 	},
 	{
 		"id": "cheese",
-		"name": "치즈버거",
-		"price": "3500"
+		"name": "띠드띠드버거",
+		"price": "4900"
+	},
+	{
+		"id": "set_cheese",
+		"name": "띠드띠드버거 세트",
+		"price": "6300"
+	},
+	{
+		"id": "bacontomato",
+		"name": "베이컨 토마토 쉐킷",
+		"price": "5000"
+	},
+	{
+		"id": "set_bacontomato",
+		"name": "베이컨 토마토 쉐킷 세트",
+		"price": "6600"
+	},
+	{
+		"id": "bulgogi",
+		"name": "따블 불고기버거",
+		"price": "4400"
+	},
+	{
+		"id": "set_bulgogi",
+		"name": "따블 불고기버거 세트",
+		"price": "5500"
+	},
+	{
+		"id": "bullimp",
+		"name": "불림프 버거",
+		"price": "5400"
+	},
+	{
+		"id": "set_bullimp",
+		"name": "불림프 버거 세트",
+		"price": "6700"
+	},
+	{
+		"id": "snackwrap",
+		"name": "핫썸머 핫핫 킹스파이시 치킹 스낵랩",
+		"price": "1500"
+	},
+	{
+		"id": "six_chicken_tender",
+		"name": "킹스파이시 치킹 텐더 6조각",
+		"price": "4700"
+	},
+	{
+		"id": "eight_chicken_tender",
+		"name": "킹스파이시 치킹 텐더 8조각",
+		"price": "8700"
+	},
+	{
+		"id": "six_nugget",
+		"name": "킹갓제네럴 너겟 6조각",
+		"price": "2800"
+	},
+	{
+		"id": "ten_nugget",
+		"name": "킹갓제네럴 너겟 10조각",
+		"price": "4200"
+	},
+	{
+		"id": "twenty_nugget",
+		"name": "킹갓제네럴 너겟 20조각",
+		"price": "7400"
 	},
 	{
 		"id": "plain_flurry",
@@ -58,5 +123,145 @@
 		"id": "choco-flurry",
 		"name": "초코 오레오 킹플러리",
 		"price": "2200"
+	},
+	{
+		"id": "apogatto",
+		"name": "오레오 아포갓토",
+		"price": "2300"
+	},
+	{
+		"id": "chocoking",
+		"name": "초코킹",
+		"price": "800"
+	},
+	{
+		"id": "iceking",
+		"name": "아이스크림킹",
+		"price": "500"
+	},
+	{
+		"id": "choco-monday",
+		"name": "초코 먼데이 아이스크림",
+		"price": "1500"
+	},
+	{
+		"id": "berry-monday",
+		"name": "딸기 먼데이 아이스크림",
+		"price": "1500"
+	},
+	{
+		"id": "vanila-monday",
+		"name": "바닐라 먼데이 아이스크림",
+		"price": "1500"
+	},
+	{
+		"id": "caramel-monday",
+		"name": "카라멜 먼데이 아이스크림",
+		"price": "1500"
+	},
+	{
+		"id": "medium_berry-fizz",
+		"name": "블루베리 킹피즈 M",
+		"price": "1500"
+	},
+	{
+		"id": "large_berry-fizz",
+		"name": "블루베리 킹피즈 L",
+		"price": "1800"
+	},
+	{
+		"id": "medium_kiwi-fizz",
+		"name": "골든 키위 킹피즈 M",
+		"price": "1500"
+	},
+	{
+		"id": "large_kiwi-fizz",
+		"name": "골든 키위 킹피즈 L",
+		"price": "1800"
+	},
+	{
+		"id": "discount_berry-fizz",
+		"name": "(세트 추가)블루베리 킹피즈 M",
+		"price": "300"
+	},
+	{
+		"id": "discount_kiwi-fizz",
+		"name": "(세트 추가)골든 키위 킹피즈 M",
+		"price": "300"
+	},
+	{
+		"id": "medium_ice-latte",
+		"name": "아이스 카페 라떼 M",
+		"price": "2000"
+	},
+	{
+		"id": "large_ice-latte",
+		"name": "아이스 카페 라떼 L",
+		"price": "3400"
+	},
+	{
+		"id": "medium_ice-americano",
+		"name": "아이스 아메리카노 M",
+		"price": "1000"
+	},
+	{
+		"id": "large_ice-americano",
+		"name": "아이스 아메리카노 L",
+		"price": "1500"
+	},
+	{
+		"id": "medium_vanila-shake",
+		"name": "바닐라 쉐킷쉐킷 M",
+		"price": "1800"
+	},
+	{
+		"id": "large_vanila-shake",
+		"name": "바닐라 쉐킷쉐킷 L",
+		"price": "2700"
+	},
+	{
+		"id": "medium_berry-shake",
+		"name": "딸기 쉐킷쉐킷 M",
+		"price": "1800"
+	},
+	{
+		"id": "large_berry-shake",
+		"name": "딸기 쉐킷쉐킷 L",
+		"price": "2700"
+	},
+	{
+		"id": "medium_coke",
+		"name": "콜라 M",
+		"price": "1000"
+	},
+	{
+		"id": "large_coke",
+		"name": "콜라 L",
+		"price": "1500"
+	},
+	{
+		"id": "medium_fanta",
+		"name": "환타 M",
+		"price": "1000"
+	},
+	{
+		"id": "large_fanta",
+		"name": "환타 L",
+		"price": "1500"
+	},
+	{
+		"id": "medium_cider",
+		"name": "사이다 M",
+		"price": "1000"
+	},
+	{
+		"id": "large_cider",
+		"name": "사이다 L",
+		"price": "1500"
+	},
+	{
+		"id": "orange-juice",
+		"name": "어륀지 주스",
+		"price": "1700"
 	}
 ]
