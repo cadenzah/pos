@@ -2,7 +2,7 @@ require('babel-register')({
   presets: [ 'react' ]
 })
 
-const express = require('express'), 
+const express = require('express'),
   app = express(),
   bodyParser = require('body-parser'),
   validator = require('express-validator'),
@@ -42,7 +42,9 @@ app.get('/', (req, res, next) => {
   })
 })
 
-app.listen(3000)
+app.listen(3000, () => {
+  console.log("On port 3000, listening...")
+})
 
 // 주문완료를 누르면
 // this.state.current_order 배열을 json으로 파싱
